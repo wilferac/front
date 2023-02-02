@@ -28,17 +28,19 @@ var data = [
   { label: "$3M", class:"premio3", value: 3, question: "Felicidades, ganaste 3M" }
 ];
 
-var button = d3
-  .select("#chart");
-
-button.on("click", spin);
-
 var svg = d3
   .select("#chart")
   .append("svg")
   .data([data])
   .attr("width", w + padding.left + padding.right)
   .attr("height", h + padding.top + padding.bottom);
+
+var b1 = d3
+  .select("#button");
+
+
+b1.on("click", spin);
+
 var container = svg
   .append("g")
   .attr("class", "chartholder")
