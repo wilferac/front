@@ -27,6 +27,12 @@ var data = [
   { label: "$5M", class:"premio5", value: 5, question: "Felicidades, ganaste 5M" },
   { label: "$3M", class:"premio3", value: 3, question: "Felicidades, ganaste 3M" }
 ];
+
+var button = d3
+  .select("#chart");
+
+button.on("click", spin);
+
 var svg = d3
   .select("#chart")
   .append("svg")
