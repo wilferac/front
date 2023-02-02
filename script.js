@@ -35,11 +35,7 @@ var svg = d3
   .attr("width", w + padding.left + padding.right)
   .attr("height", h + padding.top + padding.bottom);
 
-var b1 = d3
-  .select("#button");
-
-
-b1.on("click", spin);
+  svg.append("input");
 
 var container = svg
   .append("g")
@@ -208,6 +204,8 @@ function spin(d) {
 
       /* Comment the below line for restrict spin to sngle time */
       //container.on("click", spin);
+    document.getElementById("button").onclick=false;
+    document.getElementById("button").enable=false;
     });
 }
 
@@ -235,3 +233,5 @@ function getRandomNumbers() {
   }
   return array;
 }
+
+
